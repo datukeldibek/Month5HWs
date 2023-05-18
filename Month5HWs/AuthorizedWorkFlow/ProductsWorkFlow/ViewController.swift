@@ -33,15 +33,30 @@ class ViewController: UIViewController {
         "Grociery"
     ]
     
-    private let networkService = NetworkService()
     private var products: [Product] = []
     private var filteredProducts: [Product] = []
     private var isFiltered: Bool = false
     
+    private let viewModel: ProductsViewModel
+    
+    init() {
+        viewModel = ProductsViewModel()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        viewModel = ProductsViewModel()
+        super.init(coder: coder)
+    }
+    
+    override func loadView() {
+        super.loadView()
+        setUp()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchProducts()
-        setUp()
     }
 
     func setUp() {
@@ -84,15 +99,12 @@ class ViewController: UIViewController {
     private func fetchProducts() {
         Task {
             do {
-                let response = try await networkService.requestProducts()
-                DispatchQueue.main.async {
-                    self.products = response.products
-                    self.tableView.reloadData()
-                }
+                products = try await viewModel.fetchProducts()
+                tableView.reloadData()
             } catch {
                 
             }
-        } 
+        }
     }
 }
 
