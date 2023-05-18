@@ -10,6 +10,17 @@ import Foundation
 class NetworkService {
     private let baseURL = URL(string: "https://dummyjson.com/products")!
     
+    func requestProducts(completion: @escaping (Result<Products, Error>) -> Void) {
+        let request = URLRequest(url: Constants.API.baseURL)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                return
+            }
+            completion(.success(try! self.decode(data: data)))
+        }
+        .resume()
+    }
+    
     func requestProducts() async throws -> Products {
         let request = URLRequest(url: Constants.API.baseURL)
         let (data, _) = try await URLSession.shared.data(for: request)

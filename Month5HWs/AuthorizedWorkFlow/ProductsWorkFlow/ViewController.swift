@@ -57,6 +57,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchProducts()
+        
+        let name = UserdefaultStorage.shared.getString(forKey: .productName)
+        print("Produtc name is :\(name)")
+
+        let data = KeyChainManager.shared.read(with: Constants.Keychain.service, Constants.Keychain.account)
+        print("Model is: \(data)")
+        if let data = data {
+//            print("Model is: \(String(data: data, encoding: .utf8))")
+//            print("Model is: \(data)")
+        }
     }
 
     func setUp() {
@@ -97,12 +107,16 @@ class ViewController: UIViewController {
     }
     
     private func fetchProducts() {
-        Task {
-            do {
-                products = try await viewModel.fetchProducts()
-                tableView.reloadData()
-            } catch {
-                
+        viewModel.requestProducts { result in
+            if case .success(let data) = result {
+                DispatchQueue.global(qos: .userInteractive).async {
+                    UIView.animate(withDuration: 2) {
+                        self.products = data.products
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
             }
         }
     }
@@ -132,6 +146,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         330
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = products[indexPath.item]
+        UserdefaultStorage.shared.save(model.title,forKey: .productName)
+
+        let data = try! JSONEncoder().encode(model)
+        KeyChainManager.shared.save(data, service: Constants.Keychain.service, account: Constants.Keychain.account)
     }
 }
 

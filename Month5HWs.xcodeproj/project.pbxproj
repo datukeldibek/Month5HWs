@@ -24,6 +24,8 @@
 		0D0FED502A161F610044AC97 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FED4F2A161F610044AC97 /* ViewModel.swift */; };
 		0D0FED552A161FF50044AC97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FED542A161FF50044AC97 /* Constants.swift */; };
 		0D0FED572A1620560044AC97 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FED562A1620560044AC97 /* ViewController+Extension.swift */; };
+		0D0FED5A2A1638440044AC97 /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FED592A1638440044AC97 /* UserDefaultStorage.swift */; };
+		0D0FED5C2A1638850044AC97 /* KeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FED5B2A1638850044AC97 /* KeyChainStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		0D0FED4F2A161F610044AC97 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		0D0FED542A161FF50044AC97 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0D0FED562A1620560044AC97 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		0D0FED592A1638440044AC97 /* UserDefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultStorage.swift; sourceTree = "<group>"; };
+		0D0FED5B2A1638850044AC97 /* KeyChainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 		0D0FED512A161FB50044AC97 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0D0FED582A1638170044AC97 /* StorageServices */,
 				0D0FED362A14E8850044AC97 /* NetworkService.swift */,
 			);
 			path = Services;
@@ -194,6 +199,15 @@
 				0D0FED342A14E8780044AC97 /* Model.swift */,
 			);
 			path = DTOs;
+			sourceTree = "<group>";
+		};
+		0D0FED582A1638170044AC97 /* StorageServices */ = {
+			isa = PBXGroup;
+			children = (
+				0D0FED592A1638440044AC97 /* UserDefaultStorage.swift */,
+				0D0FED5B2A1638850044AC97 /* KeyChainStorage.swift */,
+			);
+			path = StorageServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0FED5A2A1638440044AC97 /* UserDefaultStorage.swift in Sources */,
 				0D0FED352A14E8780044AC97 /* Model.swift in Sources */,
 				0D0FED502A161F610044AC97 /* ViewModel.swift in Sources */,
+				0D0FED5C2A1638850044AC97 /* KeyChainStorage.swift in Sources */,
 				0D0FED1F2A14DD7D0044AC97 /* ViewController.swift in Sources */,
 				0D0FED322A14E85F0044AC97 /* TableViewCell.swift in Sources */,
 				0D0FED1B2A14DD7D0044AC97 /* AppDelegate.swift in Sources */,

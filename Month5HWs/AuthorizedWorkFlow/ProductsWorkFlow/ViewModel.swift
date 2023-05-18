@@ -17,4 +17,8 @@ class ProductsViewModel {
     func fetchProducts() async throws -> [Product] {
         try await networkService.requestProducts().products
     }
+    
+    func requestProducts(completion: @escaping (Result<Products, Error>) -> Void) {
+        networkService.requestProducts(completion: completion)
+    }
 }

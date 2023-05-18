@@ -10,4 +10,9 @@ enum Constants {
     enum API {
         static let baseURL = URL(string: "https://dummyjson.com/products")!
     }
+    
+    enum Keychain {
+        static let service = "FACEBOOK"
+        static let account = "balfdbds"
+    }
 }
