@@ -82,17 +82,17 @@ class ViewController: UIViewController {
     }
     
     private func fetchProducts() {
-        networkService.requestProducts{ result in
-            switch result {
-            case .success(let response):
+        Task {
+            do {
+                let response = try await networkService.requestProducts()
                 DispatchQueue.main.async {
                     self.products = response.products
                     self.tableView.reloadData()
                 }
-            case .failure(let error):
-                print(error.localizedDescription)
+            } catch {
+                
             }
-        }
+        } 
     }
 }
 
