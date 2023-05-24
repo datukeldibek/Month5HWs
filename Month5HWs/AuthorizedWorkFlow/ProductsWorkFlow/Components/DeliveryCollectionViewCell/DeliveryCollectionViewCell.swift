@@ -7,9 +7,9 @@
 
 import UIKit
 
-class CollectionViewACell: UICollectionViewCell {
-    static let reuseId = String(describing: CollectionViewACell.self)
-    static let nibName = String(describing: CollectionViewACell.self)
+class DeliveryCollectionViewCell: UICollectionViewCell {
+    static let reuseId = String(describing: DeliveryCollectionViewCell.self)
+    static let nibName = String(describing: DeliveryCollectionViewCell.self)
     
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var textLabel: UILabel!

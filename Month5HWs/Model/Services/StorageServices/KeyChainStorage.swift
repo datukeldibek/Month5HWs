@@ -8,15 +8,12 @@
 import Foundation
 
 class KeyChainManager {
-    enum Storage: String {
-        case favoriteColor
-    }
-    
     static let shared = KeyChainManager()
     
     private init() { }
         
-    func save(_ data: Data, service: String, account: String) {
+    func save<T: Codable>(_ model: T, service: String, account: String) {
+        let data = try! JSONEncoder().encode(model)
         let query = [
             kSecValueData: data,
             kSecClass: kSecClassGenericPassword,
@@ -36,11 +33,10 @@ class KeyChainManager {
             let changedAttributes = [kSecValueData: data] as CFDictionary
             SecItemUpdate(query, changedAttributes)
         }
-        
         print(status)
     }
-    
-    func read(with service: String, _ account: String) -> Data? {
+
+    func read<T: Any>(with service: String, _ account: String) -> T? {
         let query = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrService: service,
@@ -48,10 +44,16 @@ class KeyChainManager {
             kSecReturnData: true
         ] as CFDictionary
         
-//        var result: AnyObject?
         var result: AnyObject?
         SecItemCopyMatching(query, &result)
-        return (result as? Data)
+        
+        if let resultData = result as? Data,
+           let finalResult = String(data: resultData, encoding: .utf8),
+           let convertedResult = finalResult as? T {
+            return convertedResult
+        }
+        
+        return nil
     }
     
     func delete(with service: String, _ account: String) {
@@ -63,9 +65,5 @@ class KeyChainManager {
         
         SecItemDelete(query)
     }
-    
-    func decode<T: AnyObject>(data: Data) -> T {
-        if
-        return try JSONEncoder().encode(data)
-    }
+
 }

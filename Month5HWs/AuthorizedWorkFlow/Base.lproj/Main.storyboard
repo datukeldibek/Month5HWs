@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Products View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Month5HWs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProductsViewController" customModule="Month5HWs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,11 +104,11 @@
                     <navigationItem key="navigationItem" id="6Gk-T9-BXn"/>
                     <connections>
                         <outlet property="amountLabel" destination="jUx-Fu-Y0P" id="1YP-F6-7Cz"/>
-                        <outlet property="collectionViewA" destination="45G-3Z-7ao" id="G3c-7x-6r7"/>
-                        <outlet property="collectionViewB" destination="hvi-aW-6kO" id="sYS-t3-ZdI"/>
+                        <outlet property="categoryCollectionView" destination="hvi-aW-6kO" id="f2o-gA-YNn"/>
+                        <outlet property="deliveryCollectionView" destination="45G-3Z-7ao" id="Fzr-OP-mTp"/>
+                        <outlet property="productsTableView" destination="HQ3-xp-pAQ" id="kmZ-Np-ca8"/>
                         <outlet property="searchBar" destination="6gF-c6-BBo" id="1JR-O0-adF"/>
                         <outlet property="tabBar" destination="DGL-Xc-Ky9" id="RVj-Oz-U4y"/>
-                        <outlet property="tableView" destination="HQ3-xp-pAQ" id="tvI-ff-ngc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

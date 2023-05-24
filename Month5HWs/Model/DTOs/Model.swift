@@ -8,13 +8,13 @@
 import Foundation
 
 // MARK: - Product
-struct Products: Decodable {
+struct Products: Codable {
     let products: [Product]
     let total, skip, limit: Int
 }
 
 // MARK: - ProductElement
-struct Product: Decodable {
+struct Product: Codable {
     let id: Int
     let title, description: String
     let price: Int
