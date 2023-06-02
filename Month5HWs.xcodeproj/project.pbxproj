@@ -28,6 +28,14 @@
 		0D0FED5C2A1638850044AC97 /* KeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FED5B2A1638850044AC97 /* KeyChainStorage.swift */; };
 		0D0FED5E2A1B83660044AC97 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FED5D2A1B83660044AC97 /* Category.swift */; };
 		0D0FED612A1B874F0044AC97 /* ImageDowloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FED602A1B874F0044AC97 /* ImageDowloader.swift */; };
+		0D39AF2F2A2A313900827AC8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39AF2E2A2A313900827AC8 /* SplashViewController.swift */; };
+		0D39AF322A2A710200827AC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39AF312A2A710200827AC8 /* ViewController.swift */; };
+		0D39AF342A2A713C00827AC8 /* SmsVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39AF332A2A713C00827AC8 /* SmsVerificationViewController.swift */; };
+		0D39AF362A2A725100827AC8 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39AF352A2A725100827AC8 /* AuthorizationManager.swift */; };
+		0D39AF3B2A2A763000827AC8 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39AF3A2A2A763000827AC8 /* AddProductViewController.swift */; };
+		0D39AF3D2A2A764500827AC8 /* SearchProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39AF3C2A2A764500827AC8 /* SearchProductViewController.swift */; };
+		0D39AF3F2A2A7CDE00827AC8 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D39AF3E2A2A7CDE00827AC8 /* FirestoreManager.swift */; };
+		3B1A0AAF84EA4AA93AA201A9 /* Pods_Month5HWs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB3329163244569E90D139D /* Pods_Month5HWs.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +62,16 @@
 		0D0FED5B2A1638850044AC97 /* KeyChainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainStorage.swift; sourceTree = "<group>"; };
 		0D0FED5D2A1B83660044AC97 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0D0FED602A1B874F0044AC97 /* ImageDowloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDowloader.swift; sourceTree = "<group>"; };
+		0D39AF2E2A2A313900827AC8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0D39AF312A2A710200827AC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0D39AF332A2A713C00827AC8 /* SmsVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsVerificationViewController.swift; sourceTree = "<group>"; };
+		0D39AF352A2A725100827AC8 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
+		0D39AF3A2A2A763000827AC8 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		0D39AF3C2A2A764500827AC8 /* SearchProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductViewController.swift; sourceTree = "<group>"; };
+		0D39AF3E2A2A7CDE00827AC8 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		3203C2DEFB9CA291E03938EA /* Pods-Month5HWs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Month5HWs.release.xcconfig"; path = "Target Support Files/Pods-Month5HWs/Pods-Month5HWs.release.xcconfig"; sourceTree = "<group>"; };
+		9DB3329163244569E90D139D /* Pods_Month5HWs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Month5HWs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41D3480B3AAEC8D3E9844BC /* Pods-Month5HWs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Month5HWs.debug.xcconfig"; path = "Target Support Files/Pods-Month5HWs/Pods-Month5HWs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1A0AAF84EA4AA93AA201A9 /* Pods_Month5HWs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +91,8 @@
 			children = (
 				0D0FED192A14DD7D0044AC97 /* Month5HWs */,
 				0D0FED182A14DD7D0044AC97 /* Products */,
+				C739644AE34F49F2C90FD7C0 /* Pods */,
+				0D66BD5822DC2E929CB57D0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +107,9 @@
 		0D0FED192A14DD7D0044AC97 /* Month5HWs */ = {
 			isa = PBXGroup;
 			children = (
+				0D39AF2D2A2A30F600827AC8 /* WorkFlow */,
 				0D0FED2E2A14DDC00044AC97 /* App */,
 				0D0FED2F2A14DDCE0044AC97 /* Resources */,
-				0D0FED4D2A161F010044AC97 /* AuthorizedWorkFlow */,
 				0D0FED4C2A161EFA0044AC97 /* Model */,
 			);
 			path = Month5HWs;
@@ -118,7 +139,7 @@
 			children = (
 				0D0FED392A14E9660044AC97 /* ProductsTableViewCell */,
 				0D0FED422A14E9B70044AC97 /* DeliveryCollectionViewCell */,
-				0D0FED432A14E9C90044AC97 /* CollectionViewBCell */,
+				0D0FED432A14E9C90044AC97 /* CategoryCollectionViewCell */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -141,13 +162,13 @@
 			path = DeliveryCollectionViewCell;
 			sourceTree = "<group>";
 		};
-		0D0FED432A14E9C90044AC97 /* CollectionViewBCell */ = {
+		0D0FED432A14E9C90044AC97 /* CategoryCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				0D0FED3E2A14E9B10044AC97 /* CategoryCollectionViewCell.swift */,
 				0D0FED3F2A14E9B10044AC97 /* CategoryCollectionViewCell.xib */,
 			);
-			path = CollectionViewBCell;
+			path = CategoryCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		0D0FED4C2A161EFA0044AC97 /* Model */ = {
@@ -165,26 +186,21 @@
 		0D0FED4D2A161F010044AC97 /* AuthorizedWorkFlow */ = {
 			isa = PBXGroup;
 			children = (
-				0D0FED202A14DD7D0044AC97 /* Main.storyboard */,
-				0D0FED4E2A161F1D0044AC97 /* ProductsWorkFlow */,
+				0D0FED4F2A161F610044AC97 /* ProductsViewModel.swift */,
+				0D0FED382A14E8CB0044AC97 /* Components */,
+				0D39AF372A2A75D200827AC8 /* HomeVC */,
+				0D39AF392A2A761600827AC8 /* AddProductVC */,
+				0D39AF382A2A760900827AC8 /* SearchVC */,
 			);
 			path = AuthorizedWorkFlow;
-			sourceTree = "<group>";
-		};
-		0D0FED4E2A161F1D0044AC97 /* ProductsWorkFlow */ = {
-			isa = PBXGroup;
-			children = (
-				0D0FED4F2A161F610044AC97 /* ProductsViewModel.swift */,
-				0D0FED1E2A14DD7D0044AC97 /* ProductsViewController.swift */,
-				0D0FED382A14E8CB0044AC97 /* Components */,
-			);
-			path = ProductsWorkFlow;
 			sourceTree = "<group>";
 		};
 		0D0FED512A161FB50044AC97 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				0D0FED362A14E8850044AC97 /* NetworkService.swift */,
+				0D39AF352A2A725100827AC8 /* AuthorizationManager.swift */,
+				0D39AF3E2A2A7CDE00827AC8 /* FirestoreManager.swift */,
 				0D0FED582A1638170044AC97 /* StorageServices */,
 			);
 			path = Services;
@@ -224,6 +240,67 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		0D39AF2D2A2A30F600827AC8 /* WorkFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0D0FED202A14DD7D0044AC97 /* Main.storyboard */,
+				0D39AF2E2A2A313900827AC8 /* SplashViewController.swift */,
+				0D39AF302A2A314D00827AC8 /* NotAuthorizedWorkFlow */,
+				0D0FED4D2A161F010044AC97 /* AuthorizedWorkFlow */,
+			);
+			path = WorkFlow;
+			sourceTree = "<group>";
+		};
+		0D39AF302A2A314D00827AC8 /* NotAuthorizedWorkFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0D39AF312A2A710200827AC8 /* ViewController.swift */,
+				0D39AF332A2A713C00827AC8 /* SmsVerificationViewController.swift */,
+			);
+			path = NotAuthorizedWorkFlow;
+			sourceTree = "<group>";
+		};
+		0D39AF372A2A75D200827AC8 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				0D0FED1E2A14DD7D0044AC97 /* ProductsViewController.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		0D39AF382A2A760900827AC8 /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				0D39AF3C2A2A764500827AC8 /* SearchProductViewController.swift */,
+			);
+			path = SearchVC;
+			sourceTree = "<group>";
+		};
+		0D39AF392A2A761600827AC8 /* AddProductVC */ = {
+			isa = PBXGroup;
+			children = (
+				0D39AF3A2A2A763000827AC8 /* AddProductViewController.swift */,
+			);
+			path = AddProductVC;
+			sourceTree = "<group>";
+		};
+		0D66BD5822DC2E929CB57D0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DB3329163244569E90D139D /* Pods_Month5HWs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C739644AE34F49F2C90FD7C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A41D3480B3AAEC8D3E9844BC /* Pods-Month5HWs.debug.xcconfig */,
+				3203C2DEFB9CA291E03938EA /* Pods-Month5HWs.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,9 +308,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D0FED2B2A14DD820044AC97 /* Build configuration list for PBXNativeTarget "Month5HWs" */;
 			buildPhases = (
+				A6FB9BFEA54FE7270943B85C /* [CP] Check Pods Manifest.lock */,
 				0D0FED132A14DD7D0044AC97 /* Sources */,
 				0D0FED142A14DD7D0044AC97 /* Frameworks */,
 				0D0FED152A14DD7D0044AC97 /* Resources */,
+				89ADB40E356382541FFC9F23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,13 +372,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		89ADB40E356382541FFC9F23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Month5HWs/Pods-Month5HWs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Month5HWs/Pods-Month5HWs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Month5HWs/Pods-Month5HWs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6FB9BFEA54FE7270943B85C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Month5HWs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D0FED132A14DD7D0044AC97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0D0FED5A2A1638440044AC97 /* UserDefaultStorage.swift in Sources */,
+				0D39AF342A2A713C00827AC8 /* SmsVerificationViewController.swift in Sources */,
+				0D39AF3B2A2A763000827AC8 /* AddProductViewController.swift in Sources */,
 				0D0FED352A14E8780044AC97 /* Model.swift in Sources */,
+				0D39AF3F2A2A7CDE00827AC8 /* FirestoreManager.swift in Sources */,
 				0D0FED502A161F610044AC97 /* ProductsViewModel.swift in Sources */,
 				0D0FED5C2A1638850044AC97 /* KeyChainStorage.swift in Sources */,
 				0D0FED1F2A14DD7D0044AC97 /* ProductsViewController.swift in Sources */,
@@ -307,12 +431,16 @@
 				0D0FED1B2A14DD7D0044AC97 /* AppDelegate.swift in Sources */,
 				0D0FED552A161FF50044AC97 /* Constants.swift in Sources */,
 				0D0FED372A14E8850044AC97 /* NetworkService.swift in Sources */,
+				0D39AF322A2A710200827AC8 /* ViewController.swift in Sources */,
+				0D39AF3D2A2A764500827AC8 /* SearchProductViewController.swift in Sources */,
 				0D0FED402A14E9B10044AC97 /* CategoryCollectionViewCell.swift in Sources */,
 				0D0FED612A1B874F0044AC97 /* ImageDowloader.swift in Sources */,
 				0D0FED572A1620560044AC97 /* ViewController+Extension.swift in Sources */,
+				0D39AF362A2A725100827AC8 /* AuthorizationManager.swift in Sources */,
 				0D0FED3C2A14E9A30044AC97 /* DeliveryCollectionViewCell.swift in Sources */,
 				0D0FED1D2A14DD7D0044AC97 /* SceneDelegate.swift in Sources */,
 				0D0FED5E2A1B83660044AC97 /* Category.swift in Sources */,
+				0D39AF2F2A2A313900827AC8 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +584,7 @@
 		};
 		0D0FED2C2A14DD820044AC97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41D3480B3AAEC8D3E9844BC /* Pods-Month5HWs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -483,6 +612,7 @@
 		};
 		0D0FED2D2A14DD820044AC97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3203C2DEFB9CA291E03938EA /* Pods-Month5HWs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

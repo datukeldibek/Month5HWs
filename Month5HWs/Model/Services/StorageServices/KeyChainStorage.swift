@@ -36,7 +36,7 @@ class KeyChainManager {
         print(status)
     }
 
-    func read<T: Any>(with service: String, _ account: String) -> T? {
+    func read(with service: String, _ account: String) -> Any? {
         let query = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrService: service,
@@ -46,14 +46,7 @@ class KeyChainManager {
         
         var result: AnyObject?
         SecItemCopyMatching(query, &result)
-        
-        if let resultData = result as? Data,
-           let finalResult = String(data: resultData, encoding: .utf8),
-           let convertedResult = finalResult as? T {
-            return convertedResult
-        }
-        
-        return nil
+        return result
     }
     
     func delete(with service: String, _ account: String) {

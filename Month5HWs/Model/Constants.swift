@@ -12,7 +12,11 @@ enum Constants {
     }
     
     enum Keychain {
-        static let service = "FACEBOOK"
-        static let account = "balfdbds"
+        static let service = "PhoneId"
+        static let account = "PhoneSignin"
+    }
+    
+    enum Auth {
+        static let verificationID = "vID"
     }
 }
