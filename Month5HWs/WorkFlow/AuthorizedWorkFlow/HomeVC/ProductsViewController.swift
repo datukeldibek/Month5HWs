@@ -47,6 +47,25 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchProducts()
+        
+        FirestoreManager.shared.readData(collection: .news) { dictionary in
+            let str: Any = dictionary.values
+            
+            print("here")
+            print(str)
+            let product = Product(
+                id: 0,
+                title: "\(str)",
+                description: "jkfoiajgfojflks;fks;fk",
+                price: 0,
+                rating: 5.0,
+                brand: "",
+                category: "",
+                thumbnail: "https://img.freepik.com/free-photo/road-mountains-with-cloudy-sky_1340-23022.jpg"
+            )
+            self.products.append(product)
+            self.productsTableView.reloadData()
+        }
     }
     
     func setUp() {
@@ -94,9 +113,11 @@ class ProductsViewController: UIViewController {
     private func fetchProducts() {
         Task {
             do {
-                products = try await viewModel.fetchProducts()
+                let model = try await viewModel.fetchProducts()
+                products.append(contentsOf: model)
+                productsTableView.reloadData()
             } catch {
-                
+                showAlert(with: error.localizedDescription)
             }
         }
     }

@@ -12,8 +12,7 @@ class KeyChainManager {
     
     private init() { }
         
-    func save<T: Codable>(_ model: T, service: String, account: String) {
-        let data = try! JSONEncoder().encode(model)
+    func save(_ data: Data, service: String, account: String) {
         let query = [
             kSecValueData: data,
             kSecClass: kSecClassGenericPassword,
@@ -60,3 +59,5 @@ class KeyChainManager {
     }
 
 }
+
+

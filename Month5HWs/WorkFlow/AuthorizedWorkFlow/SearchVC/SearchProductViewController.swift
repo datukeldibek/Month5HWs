@@ -54,6 +54,7 @@ class SearchProductViewController: UIViewController {
         Task {
             do {
                 products = try await viewModel.fetchProducts()
+                productsTableView.reloadData()
             } catch {
                 showAlert(with: error.localizedDescription)
             }

@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="1174" y="98"/>
         </scene>
-        <!--View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="oFU-Vb-JsR">
             <objects>
-                <viewController id="TIq-Gl-YYu" sceneMemberID="viewController">
+                <viewController id="TIq-Gl-YYu" customClass="SplashViewController" customModule="Month5HWs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ASV-dr-sSC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

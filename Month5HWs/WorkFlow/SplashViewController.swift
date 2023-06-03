@@ -15,11 +15,10 @@ class SplashViewController: UIViewController {
         super.viewDidAppear(animated)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
-        
         if let data = keychain.read(with: Constants.Keychain.service, Constants.Keychain.account),
            
             let date = try? decoder.decode(Date.self, from: data as! Data),
-            date > Date() {
+            date < Date() {
             handleAuthorizedFlow()
         } else {
             handleNotAuthorizedFlow()
