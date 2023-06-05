@@ -18,7 +18,7 @@ class FirestoreManager {
     
     private init() { }
     
-    func saveTo(collection: FirestoreCollections, document: String, data: [String: Any]) {
+    func saveTo(collection: FirestoreCollections, document: String, data: [String : Any]) {
         db.collection(
             collection.rawValue
         ).addDocument(
@@ -32,7 +32,6 @@ class FirestoreManager {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print("/n/n/n/n/n")
                     print("\(document.documentID) => \(document.data())")
                     completion(document.data())
                 }

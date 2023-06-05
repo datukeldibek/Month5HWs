@@ -275,11 +275,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Product" image="person.fill" catalog="system" id="EGG-S4-epn"/>
                     <connections>
-                        <outlet property="brandTextField" destination="4in-4p-EU0" id="UUP-il-R3D"/>
-                        <outlet property="categoryTextField" destination="4in-4p-EU0" id="Bp5-4W-URQ"/>
-                        <outlet property="descriptionTextField" destination="q1f-WL-oGc" id="E7q-wV-TKt"/>
-                        <outlet property="priceTextField" destination="dbD-CN-fM5" id="g0r-Uh-urR"/>
-                        <outlet property="titleTextField" destination="dbD-CN-fM5" id="Dgw-vJ-ifW"/>
+                        <outlet property="brandTextField" destination="4in-4p-EU0" id="Wfm-s7-Xm1"/>
+                        <outlet property="categoryTextField" destination="q1f-WL-oGc" id="fty-0u-MdA"/>
+                        <outlet property="descriptionTextField" destination="jGj-3r-1jD" id="fHA-y4-rMK"/>
+                        <outlet property="priceTextField" destination="dbD-CN-fM5" id="N3Y-Cp-lNV"/>
+                        <outlet property="titleTextField" destination="639-C9-Zcz" id="VS6-Gc-aoG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGj-wg-2mP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

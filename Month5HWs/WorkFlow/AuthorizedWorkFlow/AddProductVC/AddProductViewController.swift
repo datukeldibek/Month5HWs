@@ -16,17 +16,31 @@ class AddProductViewController: UIViewController {
     @IBOutlet weak var brandTextField: UITextField!
     
     @IBAction func addProductButton(_ sender: Any) {
-        let product = [
-            self.titleTextField.text ?? "",
-            self.priceTextField.text ?? "",
-            self.descriptionTextField.text ?? "",
-            self.categoryTextField.text ?? "",
-            self.brandTextField.text ?? ""
-        ]
-        FirestoreManager.shared.saveTo(collection: .news, document: "", data: ["Product" : product])
-        
+        FirestoreManager.shared.saveTo(
+            collection: .products,
+            document: "",
+            data: [
+                "title" : titleTextField.text,
+                "price" : priceTextField.text,
+                "description" : descriptionTextField.text,
+                "category" : categoryTextField.text,
+                "brand" : brandTextField.text
+            ]
+        )
         clearTextFields()
+        goToHomePage()
     }
+    private func goToHomePage() {
+        let vc = UIStoryboard(
+            name: "Main",
+            bundle: nil
+        ).instantiateViewController(
+            withIdentifier: "ProductsTabBarController"
+        )
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false)
+    }
+    
     private func clearTextFields() {
         self.titleTextField.text = ""
         self.priceTextField.text = ""

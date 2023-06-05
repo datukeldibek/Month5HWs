@@ -42,25 +42,19 @@ class ProductsViewController: UIViewController {
     override func loadView() {
         super.loadView()
         setUp()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fetchProducts()
         
-        FirestoreManager.shared.readData(collection: .news) { dictionary in
-            let str: Any = dictionary.values
-            
-            print("here")
-            print(str)
+        FirestoreManager.shared.readData(collection: .products) { dictionary in
+            let str: [String : Any] = dictionary
+            print("kgnjhhhhhhhhhhhhhhh")
+            print(str.values)
             let product = Product(
                 id: 0,
-                title: "\(str)",
-                description: "jkfoiajgfojflks;fks;fk",
-                price: 0,
+                title: str["title"] as! String,
+                description: str["description"] as! String,
+                price: Int(str["price"] as! String) ?? 0,
                 rating: 5.0,
-                brand: "",
-                category: "",
+                brand: str["brand"] as! String,
+                category: str["category"] as! String,
                 thumbnail: "https://img.freepik.com/free-photo/road-mountains-with-cloudy-sky_1340-23022.jpg"
             )
             self.products.append(product)
@@ -68,11 +62,17 @@ class ProductsViewController: UIViewController {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchProducts()
+    }
+    
     func setUp() {
         configureTableView()
         configureSearchBar()
         configureCollectionView()
     }
+    
     func configureTableView() {
         productsTableView.dataSource = self
         productsTableView.delegate = self
